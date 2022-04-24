@@ -39,10 +39,10 @@ class FinishedListFilter(admin.SimpleListFilter):
         now = timezone.now().date()
 
         if self.value() == "True":
-            return queryset.filter(check_out__lt=now)
+            return queryset.filter(check_out__lte=now)
 
         elif self.value() == "False":
-            return queryset.exclude(check_out__lt=now)
+            return queryset.exclude(check_out__lte=now)
 
 
 @admin.register(models.Reservation)
