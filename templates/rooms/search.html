@@ -42,8 +42,8 @@
         </div>
 
         <div>
-            <label for="guest">Guest</label>
-            <input value="{{guest}}" type="number" name="guest" id="guest" placeholder="Guest">
+            <label for="guests">Guests</label>
+            <input value="{{guests}}" type="number" name="guests" id="guests" placeholder="Guests">
         </div>
 
         <div>
@@ -62,8 +62,8 @@
         </div>
 
         <div>
-            <label for="super_host">By Superhost Only?</label>
-            <input type="checkbox" name="super_host" id="super_host" {% if super_host %}checked{% endif %}>
+            <label for="superhost">By Superhost Only?</label>
+            <input type="checkbox" name="superhost" id="superhost" {% if superhost %}checked{% endif %}>
         </div>
 
         <div>
@@ -112,5 +112,11 @@
         </div>
         <button>Search</button>
     </form>
+
+    <h3>Results</h3>
+
+    {% for room in rooms%}
+        <h3>{{room.name}}</h3>
+    {% endfor %}
 
 {% endblock content %}
