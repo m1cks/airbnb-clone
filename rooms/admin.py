@@ -85,6 +85,7 @@ class RoomAdmin(admin.ModelAdmin):
     raw_id_fields = ("hosts",)
 
     search_fields = (
+        "^name",
         "=city",
         "^hosts__username",
     )
