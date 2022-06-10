@@ -1,4 +1,3 @@
-from email import header
 import os
 import requests
 from django.views.generic import FormView
@@ -33,11 +32,6 @@ class SignUpView(FormView):
     template_name = "users/signup.html"
     form_class = forms.SignUpForm
     success_url = reverse_lazy("core:home")
-    initial = {
-        "first_name": "First Name",
-        "last_name": "Last Name",
-        "email": "example1234@example.com",
-    }
 
     def form_valid(self, form):
         form.save()
