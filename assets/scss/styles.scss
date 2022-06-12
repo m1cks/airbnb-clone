@@ -97,7 +97,7 @@ form {
 
     &.error {
         @apply bg-red-600;
-        transform: translateY(-50px);
+        transform: translateY(50px);
     }
 
     &.info {
@@ -112,6 +112,6 @@ form {
 
     &.warning {
         @apply bg-yellow-500;
-        transform: translateY(-50px)
+        transform: translateY(50px)
     }
 }
